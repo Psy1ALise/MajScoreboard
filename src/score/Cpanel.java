@@ -181,12 +181,6 @@ public class Cpanel extends JFrame {
 		IDField4.setBounds(896, 168, 150, 24);
 		contentPane.add(IDField4);
 
-		JButton updateIDButton = new JButton("保存ID");
-		updateIDButton.setToolTipText("");
-		updateIDButton.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-		updateIDButton.setBounds(1069, 168, 75, 24);
-		contentPane.add(updateIDButton);
-
 		JLabel oyaLabel = new JLabel("自亲");
 		oyaLabel.setFont(new Font("微软雅黑", Font.PLAIN, 12));
 		oyaLabel.setBounds(82, 199, 46, 14);
@@ -277,29 +271,29 @@ public class Cpanel extends JFrame {
 		tenPai4.setBounds(926, 260, 90, 24);
 		contentPane.add(tenPai4);
 
-		JToggleButton riichii1 = new JToggleButton("立直");
-		riichii1.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-		riichii1.addActionListener(new ActionListener() {
+		JToggleButton riichi1 = new JToggleButton("立直");
+		riichi1.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+		riichi1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		riichii1.setBounds(200, 295, 90, 24);
-		contentPane.add(riichii1);
+		riichi1.setBounds(200, 295, 90, 24);
+		contentPane.add(riichi1);
 
-		JToggleButton riichii2 = new JToggleButton("立直");
-		riichii2.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-		riichii2.setBounds(443, 295, 90, 24);
-		contentPane.add(riichii2);
+		JToggleButton riichi2 = new JToggleButton("立直");
+		riichi2.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+		riichi2.setBounds(443, 295, 90, 24);
+		contentPane.add(riichi2);
 
-		JToggleButton riichii3 = new JToggleButton("立直");
-		riichii3.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-		riichii3.setBounds(683, 295, 90, 24);
-		contentPane.add(riichii3);
+		JToggleButton riichi3 = new JToggleButton("立直");
+		riichi3.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+		riichi3.setBounds(683, 295, 90, 24);
+		contentPane.add(riichi3);
 
-		JToggleButton riichii4 = new JToggleButton("立直");
-		riichii4.setFont(new Font("微软雅黑", Font.PLAIN, 12));
-		riichii4.setBounds(926, 295, 90, 24);
-		contentPane.add(riichii4);
+		JToggleButton riichi4 = new JToggleButton("立直");
+		riichi4.setFont(new Font("微软雅黑", Font.PLAIN, 12));
+		riichi4.setBounds(926, 295, 90, 24);
+		contentPane.add(riichi4);
 
 		JButton updateButton = new JButton("更新场况");
 		updateButton.setToolTipText("");
@@ -316,33 +310,51 @@ public class Cpanel extends JFrame {
 				} else if (shaRB.isSelected()) {
 					Dpanel.Instance.wind.setText("西");
 				}
-				
+
 				// kyoutakuNumber honbaNumber
 				Dpanel.Instance.kyoutakuNumber.setText(kyoutakuField.getText());
 				Dpanel.Instance.honbaNumber.setText(honbaField.getText());
-				
-				// kyokuNumber
+
+				// kyokuNumber oyaDisplay
 				if (oyaRB1.isSelected()) {
 					Dpanel.Instance.kyokuNumber.setText("1");
+					Dpanel.Instance.oyaPanel.setBounds(184, 720, 6, 100);
 				} else if (oyaRB2.isSelected()) {
 					Dpanel.Instance.kyokuNumber.setText("2");
+					Dpanel.Instance.oyaPanel.setBounds(534, 720, 6, 100);
 				} else if (oyaRB3.isSelected()) {
 					Dpanel.Instance.kyokuNumber.setText("3");
+					Dpanel.Instance.oyaPanel.setBounds(884, 720, 6, 100);
 				} else if (oyaRB4.isSelected()) {
 					Dpanel.Instance.kyokuNumber.setText("4");
+					Dpanel.Instance.oyaPanel.setBounds(1234, 720, 6, 100);
 				}
-				
+
 				// player name
 				Dpanel.Instance.pl1Name.setText(IDField1.getText());
 				Dpanel.Instance.pl2Name.setText(IDField2.getText());
 				Dpanel.Instance.pl3Name.setText(IDField3.getText());
 				Dpanel.Instance.pl4Name.setText(IDField4.getText());
-				
+
 				// player score
 				Dpanel.Instance.pl1Score.setText(scoreField1.getText());
 				Dpanel.Instance.pl2Score.setText(scoreField2.getText());
 				Dpanel.Instance.pl3Score.setText(scoreField3.getText());
 				Dpanel.Instance.pl4Score.setText(scoreField4.getText());
+
+				// riichi state
+				if (riichi1.isSelected()) {
+
+				}
+				if (riichi2.isSelected()) {
+
+				}
+				if (riichi3.isSelected()) {
+
+				}
+				if (riichi4.isSelected()) {
+
+				}
 			}
 		});
 		contentPane.add(updateButton);
